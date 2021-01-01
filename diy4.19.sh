@@ -31,6 +31,6 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-a
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
 git clone https://github.com/jerrykuku/luci-app-ttnode.git package/luci-app-ttnode
 git clone https://github.com/ledewrt/luci-app-ledeproxy.git package/luci-app-ledeproxy
-git clone https://github.com/ITdesk01/JD_Script.git files/usr/share/JD_Script
+git clone https://github.com/firkerword/JD_Script.git files/usr/share/JD_Script
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 
