@@ -22,10 +22,12 @@ sed -i "s/hostname='OpenWrt'/hostname='OpenWrt-SE'/g" ./package/base-files/files
 # rm -rf ./package/lean/dnsforwarder
 rm -rf ./package/lean/luci-theme-argon
 rm -rf ./feeds/packages/net/https-dns-proxy
+rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/diy/luci-app-vssr-plus
 rm -rf ./feeds/diy/vssr
 # rm -rf ./package/lean/v2ray
 # rm -rf ./package/lean/v2ray-plugin
 # svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray package/lean/xray
+svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns feeds/packages/net/smartdns
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/lean/dnsforwarder package/lean/dnsforwarder
