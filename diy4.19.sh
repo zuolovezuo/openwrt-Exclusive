@@ -23,7 +23,7 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds
 
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
-svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/helloword
+svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/luci-app-ssr-plus
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
