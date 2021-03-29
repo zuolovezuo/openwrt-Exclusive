@@ -28,7 +28,7 @@ git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luc
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
-git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
+# git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
 # git clone https://github.com/BCYDTZ/luci-app-UUGameAcc.git package/luci-app-UUGameAcc
 svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns-le package/smartdns-le
