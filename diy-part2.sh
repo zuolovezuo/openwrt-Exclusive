@@ -24,8 +24,6 @@ rm -rf ./package/lean/luci-theme-argon
 # rm -rf ./package/lean/shadowsocksr-libev
 rm -rf ./feeds/packages/net/https-dns-proxy
 rm -rf ./feeds/packages/devel/ninja
-rm -rf ./feeds/diy/luci-app-adguardhome
-rm -rf ./feeds/diy/adguardhome
 # rm -rf ./feeds/packages/net/smartdns
 # rm -rf ./feeds/passwall/luci-app-passwall
 # rm -rf ./feeds/helloworld/luci-app-ssr-plus
@@ -38,8 +36,6 @@ rm -rf ./feeds/diy/adguardhome
 # svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns feeds/packages/net/smartdns
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
 svn co https://github.com/Lienol/openwrt-packages/trunk/devel/ninja feeds/packages/devel/ninja
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome feeds/diy/adguardhome
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome feeds/diy/luci-app-adguardhome
 # find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
 # find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/lean/dnsforwarder package/lean/dnsforwarder
