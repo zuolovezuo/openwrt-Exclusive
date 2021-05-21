@@ -24,6 +24,8 @@ rm -rf ./package/lean/luci-theme-argon
 # rm -rf ./package/lean/shadowsocksr-libev
 rm -rf ./feeds/packages/net/https-dns-proxy
 rm -rf ./feeds/packages/devel/ninja
+rm -rf ./feeds/diy/luci-app-adguardhome
+rm -rf ./feeds/diy/adguardhome
 # rm -rf ./feeds/packages/net/smartdns
 # rm -rf ./feeds/passwall/luci-app-passwall
 # rm -rf ./feeds/helloworld/luci-app-ssr-plus
