@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: OpenWrt-lede5.4
+name: OpenWrt-lede5.10
 
 on:
   repository_dispatch:
@@ -23,8 +23,8 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 5.4.config
-  DIY_P1_SH: diy5.4.sh
+  CONFIG_FILE: 5.10.config
+  DIY_P1_SH: diy5.10.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
@@ -135,7 +135,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_5.4${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_5.10${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 上传固件到NN网盘
@@ -192,7 +192,7 @@ jobs:
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         SCKEY: ${{ secrets.SERVERCHAN }}
-        text: 恭喜主人openwrt5.4固件编译成功！
+        text: 恭喜主人openwrt5.10固件编译成功！
         desp: 我亲爱的主人您要编译的固件成功完成了！
               
               
