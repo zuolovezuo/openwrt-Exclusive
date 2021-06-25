@@ -22,14 +22,12 @@ sed -i '$a src-git ssr https://github.com/fw876/helloworld' feeds.conf.default
 sed -i '$a src-git diy https://github.com/firker/diy-ziyong' feeds.conf.default
 sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
+sed -i '$a src-git bypass https://github.com/garypang13/openwrt-bypass' feeds.conf.default
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
-svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/luci-app-ssr-plus
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
-git clone https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
 # git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
 # git clone https://github.com/BCYDTZ/luci-app-UUGameAcc.git package/luci-app-UUGameAcc
-svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns-le package/smartdns-le
