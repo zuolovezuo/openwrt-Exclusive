@@ -27,3 +27,4 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme
 # git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
 # git clone https://github.com/BCYDTZ/luci-app-UUGameAcc.git package/luci-app-UUGameAcc
+rm -rf ./package/lean/luci-app-qbittorrent
