@@ -10,7 +10,7 @@ lean固件源码地址：[https://github.com/coolsnowwolf/lede](https://github.c
 
 ## 固件说明：
 
-lean源码版本，内核为***4.19***版
+lean源码版本，内核为***5.4和5.10***版
 
 自动每3天更新一次，手动不定时更新
 
@@ -21,7 +21,7 @@ lean源码版本，内核为***4.19***版
 ![avatar](https://raw.githubusercontent.com/firkerword/openwrt-Exclusive/main/boc/c.png)
 
 ## 固件截图：
-### 4.19版
+### 5.10版
 ![avatar](https://raw.githubusercontent.com/firkerword/openwrt-Exclusive/main/boc/c.jpg)
 ## 其他
 联系：[Tg频道订阅](https://t.me/zhinengchaoshenzhe)
