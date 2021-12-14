@@ -21,4 +21,6 @@ rm -rf ./package/lean/luci-theme-argon
 rm -rf ./package/lean/luci-app-serverchan
 rm -rf ./feeds/packages/net/adguardhome
 rm -rf ./feeds/packages/net/https-dns-proxy
+rm -rf ./feeds/packages/utils/runc/Makefile
+svn export https://github.com/openwrt/packages/trunk/utils/runc/Makefile ./feeds/packages/utils/runc/Makefile
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
