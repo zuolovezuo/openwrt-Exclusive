@@ -26,13 +26,10 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luc
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 git clone https://github.com/kiddin9/openwrt-bypass.git package/openwrt-bypass
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 # git clone https://github.com/jerrykuku/openwrt-package.git package/jerrykuku-vssr
-# git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 # git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
-# git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
-# git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
-# git clone https://github.com/BCYDTZ/luci-app-UUGameAcc.git package/luci-app-UUGameAcc
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
