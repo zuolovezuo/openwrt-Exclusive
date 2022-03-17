@@ -30,6 +30,7 @@ git clone -b luci https://github.com/xiaorouji/openwrt-passwall package/passwall
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
+svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
 # git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
