@@ -27,7 +27,6 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 git clone https://github.com/kiddin9/openwrt-bypass.git package/openwrt-bypass
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
-# git clone https://github.com/jerrykuku/openwrt-package.git package/jerrykuku-vssr
 # git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
