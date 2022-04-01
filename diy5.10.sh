@@ -32,9 +32,6 @@ git clone -b luci https://github.com/xiaorouji/openwrt-passwall package/passwall
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
-# 应用商店
-svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
-svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
 svn co https://github.com/linkease/openwrt-themedog/trunk/luci/luci-theme-dog package/luci-theme-dog
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
 svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
