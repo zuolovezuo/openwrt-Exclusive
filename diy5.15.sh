@@ -10,9 +10,9 @@
 # git clone https://github.com/firker/neihe.git
 
 # mv -f neihe/Makefile ./target/linux/x86/Makefile
-sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
-sed -i 's/KERNEL_TESTING_PATCHVER:=5.10/KERNEL_TESTING_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
+# sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
+# sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
+# sed -i 's/KERNEL_TESTING_PATCHVER:=5.10/KERNEL_TESTING_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
 
 # Uncomment a feed source
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
@@ -33,6 +33,9 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
+svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
+sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
+svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
 # git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
 # git clone https://github.com/BCYDTZ/luci-app-UUGameAcc.git package/luci-app-UUGameAcc
