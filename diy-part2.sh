@@ -24,6 +24,7 @@ rm -rf ./package/lean/luci-app-serverchan
 rm -rf ./feeds/packages/net/adguardhome
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/mosdns
+rm -rf ./package/passwall/v2ray-geodata
 # rm -rf ./package/diy-ziyong/adguardhome
 # rm -rf ./feeds/packages/net/https-dns-proxy
 # svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
