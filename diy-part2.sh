@@ -24,7 +24,7 @@ rm -rf ./package/lean/luci-app-serverchan
 rm -rf ./feeds/packages/net/adguardhome
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/mosdns
-rm -rf ./package/passwall/v2ray-geodata
+rm -rf ./package/openwrt-passwall/v2ray-geodata
 rm -rf ./package/ssr/v2ray-geodata
 # rm -rf ./package/diy-ziyong/adguardhome
 # rm -rf ./feeds/packages/net/https-dns-proxy
