@@ -25,6 +25,7 @@ rm -rf ./package/lean/luci-app-serverchan
 rm -rf ./feeds/packages/net/adguardhome
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/mosdns
+rm -rf ./package/passwall/v2ray-geodata
 rm -rf ./target/linux/generic/pending-5.10/701-net-ethernet-mtk_eth_soc-add-ipv6-flow-offloading-support.patch
 # rm -rf ./feeds/packages/net/https-dns-proxy
 # svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
