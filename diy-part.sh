@@ -27,6 +27,5 @@ rm -rf ./feeds/packages/net/mosdns
 rm -rf .feeds/luci/luci-theme-argon
 rm -rf ./package/openwrt-passwall/v2ray-geodata
 rm -rf ./package/ssr/v2ray-geodata
-rm -rf ./target/linux/generic/pending-5.10/701-net-ethernet-mtk_eth_soc-add-ipv6-flow-offloading-support.patch
 # rm -rf ./feeds/packages/net/https-dns-proxy
 # svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
