@@ -32,6 +32,7 @@ git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
+git clone https://github.com/sbwml/openwrt-alist.git package/openwrt-alist
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
 svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
