@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: OpenWrt-lede5.10D
+name: OpenWrt-lede5.1D
 
 on:
   repository_dispatch:
@@ -23,8 +23,8 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 5.10D.config
-  DIY_P1_SH: diy5.10.sh
+  CONFIG_FILE: 5.1D.config
+  DIY_P1_SH: diy5.18.sh
   DIY_P2_SH: diy-part.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
@@ -135,7 +135,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_5.10D${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_5.1D${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 上传固件到NN网盘
@@ -174,7 +174,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 「 openwrt5.10D-X86-64定制版 」
+        name: ${{ env.FILE_TIME }} 「 openwrt5.1D-X86-64定制版 」
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
