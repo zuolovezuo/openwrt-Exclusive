@@ -34,12 +34,10 @@ git clone https://github.com/firkerword/luci-app-alist.git package/luci-app-alis
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall package/passwall
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
-svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
-sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
-svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
+# svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
+# sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
+# svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpulimit package/luci-app-cpulimit
-svn co https://github.com/immortalwrt/packages/trunk/utils/cpulimit package/cpulimit
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
