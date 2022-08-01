@@ -34,9 +34,9 @@ git clone https://github.com/firkerword/luci-app-alist.git package/luci-app-alis
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall package/passwall
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
-# svn co https://github.com/linkease/istore.git package/istore
+# git clone https://github.com/linkease/istore.git package/istore
 # sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
-# svn co https://github.com/linkease/istore-ui.git package/istore-ui
+# git clone https://github.com/linkease/istore-ui.git package/istore-ui
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpulimit package/luci-app-cpulimit
 svn co https://github.com/immortalwrt/packages/trunk/utils/cpulimit package/cpulimit
