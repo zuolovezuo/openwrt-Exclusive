@@ -35,9 +35,9 @@ git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
 git clone https://github.com/sbwml/openwrt-alist.git package/openwrt-alist
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
-# svn co https://github.com/linkease/istore.git package/istore
-# sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
-# svn co https://github.com/linkease/istore-ui.git package/istore-ui
+# git clone https://github.com/linkease/istore.git package/istore
+# sed -i 's/luci-lib-ipkg/luci-base/g' package/istore/luci/luci-app-store/Makefile
+# git clone https://github.com/linkease/istore-ui.git package/istore-ui
 # git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
 # git clone https://github.com/BCYDTZ/luci-app-UUGameAcc.git package/luci-app-UUGameAcc
