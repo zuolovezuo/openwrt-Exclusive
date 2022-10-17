@@ -165,7 +165,7 @@ jobs:
       with:
         name: ${{ env.FILE_TIME }} 「 openwrt-Project-X86-64 」
         allowUpdates: true
-        tag: $(date +"%Y.%m.%d-%H%M")
+        tag: ${{ env.FILE_DATE }}
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
         body: |
