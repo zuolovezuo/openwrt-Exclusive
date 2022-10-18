@@ -27,7 +27,7 @@ env:
   DIY_P1_SH: diy5.19.sh
   DIY_P2_SH: diy-part.sh
   SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: true
@@ -136,7 +136,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_5.1D${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_6.0D${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 上传固件到NN网盘
@@ -175,7 +175,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 「 openwrt5.19-X86-64定制版 」
+        name: ${{ env.FILE_TIME }} 「 openwrt6.0-X86-64定制版 」
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
