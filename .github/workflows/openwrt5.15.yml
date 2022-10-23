@@ -64,7 +64,8 @@ jobs:
         cd openwrt
         useVersionInfo=$(git show -s --date=short --format="%0AAuthor: %an%0Adate: %cd%0Acommit: %s%0Acommit hash: %H")
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
-        echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV       
+        echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
+        
     - name: 加载自定义设置
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
@@ -181,7 +182,6 @@ jobs:
           由衷感谢所有为openwrt无私奉献的大佬们
           📥 固件下载
           🔗 [国外WT网盘](${{ steps.wetransfer.outputs.url }})
-          ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
 
     - name: 清理旧的workflow
@@ -200,5 +200,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
 
     - name: TG推送
-      run: curl "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=编译时间：${{ env.DATE }}%0AOpenWrt 更新信息：${{ env.useVersionInfo }}%0A恭喜主人openwrt5.15-X86固件编译完成！"
+      run: curl "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=编译时间：${{ env.DATE }}%0AOpenWrt 更新信息：${{ env.useVersionInfo }}%0AX86恭喜主人openwrt5.15固件编译完成！"
 
