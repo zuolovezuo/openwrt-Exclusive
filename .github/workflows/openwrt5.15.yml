@@ -69,6 +69,7 @@ jobs:
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
+
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
     - name: 下载插件
@@ -180,6 +181,7 @@ jobs:
           由衷感谢所有为openwrt无私奉献的大佬们
           📥 固件下载
           🔗 [国外WT网盘](${{ steps.wetransfer.outputs.url }})
+          ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
 
     - name: 清理旧的workflow
