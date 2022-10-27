@@ -27,6 +27,7 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
 git clone https://github.com/kiddin9/openwrt-bypass.git package/openwrt-bypass
+sed -i 's/luci-lib-ipkg/luci-base/g' package/openwrt-bypass/luci-app-bypass/Makefile
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
 git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
