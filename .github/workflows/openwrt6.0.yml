@@ -25,7 +25,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 6.0D.config
   DIY_P1_SH: diy6.0.sh
-  DIY_P2_SH: diy-part.sh
+  DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
@@ -172,7 +172,7 @@ jobs:
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
         body: |
-          功能介绍：含Docker、Passwall、Openclash、MosDNS、alist网盘挂载工具等插件。
+          功能介绍：含Docker、Passwall、bypass、MosDNS、alist网盘挂载工具等插件。
           [固件源码](https://github.com/coolsnowwolf/lede)
           由衷感谢所有为openwrt无私奉献的大佬们
           📥 固件下载
