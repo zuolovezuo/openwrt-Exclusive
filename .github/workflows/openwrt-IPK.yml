@@ -15,7 +15,7 @@ on:
       applications:
         description: 'build applications, eg: "luci-app-mosdns". "all" means build all'
         required: true
-        default: 'all'
+        default: 'luci-app-mosdns'
       ssh:
         description: 'SSH connection to Actions'
         required: false
