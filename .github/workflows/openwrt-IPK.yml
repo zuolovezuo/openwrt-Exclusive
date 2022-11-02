@@ -45,7 +45,59 @@ jobs:
     - name: 检查项目分支
       uses: actions/checkout@main
 
+    - name: 安装编译环境
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        sudo -E apt-get -qq update
+        sudo -E apt-get -qq full-upgrade
+        sudo -E apt-get -qq install $(curl -fsSL https://github.com/firkerword/openwrt-list/raw/master/depends-ubuntu-2004)
+        sudo -E apt-get -qq autoremove --purge
+        sudo -E apt-get -qq clean
+        sudo timedatectl set-timezone "$TZ"
+        sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
+    - name: 下载固件源码
+      working-directory: /workdir
+      run: |
+        df -hT $PWD
+        git clone https://github.com/coolsnowwolf/lede.git openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+    - name: 加载自定义设置
+      run: |
+        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
+        chmod +x $DIY_P1_SH
+        cd openwrt
+        $GITHUB_WORKSPACE/$DIY_P1_SH
+        
+    - name: 下载插件
+      run: cd openwrt && ./scripts/feeds update -a
 
+    - name: 读取插件
+      run: cd openwrt && ./scripts/feeds install -a
+
+    - name: 更改设置
+      run: |
+        [ -e files ] && mv files openwrt/files
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+
+    - name: SSH链接管理
+      uses: P3TERX/ssh2actions@v1.0.0
+      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+      env:
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
+    - name: 下载安装包
+      id: package
+      run: |
+        cd openwrt
+        make defconfig
+        make download -j8
+        find dl -size -1024c -exec ls -l {} \;
+        find dl -size -1024c -exec rm -f {} \;
+        
     - name: 开始编译固件
       id: compile
       run: |
