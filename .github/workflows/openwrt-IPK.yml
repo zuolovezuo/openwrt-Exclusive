@@ -24,6 +24,7 @@ on:
     - cron: 0 18 */3 * *
 
 env:
+  FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ipk.config
   DIY_P1_SH: ipk.sh
   SSH_ACTIONS: false
