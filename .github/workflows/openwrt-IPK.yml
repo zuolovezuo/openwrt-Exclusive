@@ -77,8 +77,8 @@ jobs:
       run:
         cd openwrt
         make defconfig
-        make tools/install V=s -j$(grep processor /proc/cpuinfo | wc -l)
-        make toolchain/install V=s -j$(grep processor /proc/cpuinfo | wc -l)
+        make tools/install V=s -j$(nproc)
+        make toolchain/install V=s -j$(nproc)
 
     - name: 更改设置
       run: |
