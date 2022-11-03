@@ -67,17 +67,21 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
     - name: 下载插件
-      run: cd openwrt && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a 
 
     - name: 读取插件
       run: cd openwrt && ./scripts/feeds install -a
 
     - name: 获取交叉编译链
-      id: make
       run:
         cd openwrt
         make defconfig
         make tools/install V=s -j$(nproc)
+        
+    - name: 获取交叉编译链
+      run:
+        cd openwrt
+        make defconfig
         make toolchain/install V=s -j$(nproc)
 
     - name: 更改设置
