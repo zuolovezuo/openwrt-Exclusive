@@ -76,12 +76,14 @@ jobs:
       run:
         cd openwrt
         make defconfig
+        echo -e "$(nproc) thread compile"
         make tools/install V=s -j$(nproc)
         
     - name: 获取交叉编译链
       run:
         cd openwrt
         make defconfig
+        echo -e "$(nproc) thread compile"
         make toolchain/install V=s -j$(nproc)
 
     - name: 更改设置
