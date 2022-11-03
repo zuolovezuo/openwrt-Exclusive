@@ -73,8 +73,10 @@ jobs:
       run: cd openwrt && ./scripts/feeds install -a
 
     - name: 获取交叉编译链
+      id: make compile
       run:
         cd openwrt
+        make defconfig
         make tools/install V=s -j$(grep processor /proc/cpuinfo | wc -l)
         make toolchain/install V=s -j$(grep processor /proc/cpuinfo | wc -l)
 
