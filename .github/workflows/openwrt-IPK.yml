@@ -73,7 +73,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds install -a
 
     - name: 获取交叉编译链
-      id: make compile
+      id: make
       run:
         cd openwrt
         make defconfig
