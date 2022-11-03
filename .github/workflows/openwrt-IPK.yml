@@ -15,7 +15,7 @@ on:
       applications:
         description: 'build applications, eg: "luci-app-mosdns". "all" means build all'
         required: true
-        default: 'luci-app-mosdns'
+        default: 'mosdns'
       ssh:
         description: 'SSH connection to Actions'
         required: false
@@ -73,6 +73,12 @@ jobs:
     - name: 读取插件
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: 获取交叉编译链
+      run:
+        cd openwrt
+        make tools/install V=s -j$(grep processor /proc/cpuinfo | wc -l)
+        make toolchain/install V=s -j$(grep processor /proc/cpuinfo | wc -l)
+
     - name: 更改设置
       run: |
         [ -e files ] && mv files openwrt/files
@@ -100,7 +106,7 @@ jobs:
         apps="${{ github.event.inputs.applications }}"
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 || make -j1 V=s
+        make package/ipk/luci-app-$apps/compile -j$(nproc) || make package/ipk/luci-app-$apps/compile -j1 || make package/ipk/luci-app-$apps/compile -j1 V=s
         echo "::set-output name=status::success"
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
@@ -118,7 +124,15 @@ jobs:
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/bin/packages/x86_64
-
+        
+    - name: 整理编译好的固件
+      id: organize
+      if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
+      run: |
+        apps="${{ github.event.inputs.applications }}"
+        cd openwrt/bin/packages/x86_64
+        find -name "*$apps*" | xargs -i mv -f {} ipks
+        
     - name: 发布至release
       id: release
       uses: ncipollo/release-action@v1
@@ -131,7 +145,7 @@ jobs:
         token: ${{ secrets.RELEASE_TOKEN }}
         body: |
           X86 IPK
-        artifacts: openwrt/bin/packages/x86_64/base/*
+        artifacts: openwrt/bin/packages/x86_64/ipks/*
 
     - name: 清理旧的workflow
       uses: GitRML/delete-workflow-runs@main
