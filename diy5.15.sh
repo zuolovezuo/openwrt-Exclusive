@@ -18,6 +18,8 @@
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 # sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 # sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
+git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
 git clone https://github.com/fw876/helloworld.git package/ssr
 git clone https://github.com/firker/diy-ziyong.git package/diy-ziyong
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
@@ -29,13 +31,14 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 # git clone https://github.com/siropboy/sirpdboy-package package/sirpdboy-package
-git clone https://github.com/kiddin9/openwrt-bypass.git package/openwrt-bypass
-sed -i 's/luci-lib-ipkg/luci-base/g' package/openwrt-bypass/luci-app-bypass/Makefile
+# git clone https://github.com/kiddin9/openwrt-bypass.git package/openwrt-bypass
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
 git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall package/passwall
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass package/luci-app-bypass
+# sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-bypass/Makefile
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 # git clone https://github.com/linkease/istore.git package/istore
