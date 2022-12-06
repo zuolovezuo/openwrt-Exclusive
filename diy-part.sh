@@ -24,7 +24,8 @@ rm -rf ./feeds/luci/applications/luci-app-serverchan
 rm -rf ./feeds/packages/net/adguardhome
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/mosdns
-rm -rf ./feeds/luci/luci-theme-argon
+rm -rf ./feeds/luci/themes/luci-theme-argon
+rm -rf ./feeds/luci/applications/luci-app-wrtbwmon
 rm -rf ./package/openwrt-passwall/v2ray-geodata
 rm -rf ./package/ssr/v2ray-geodata
 rm -rf .package/sirpdboy-package/smartdns
