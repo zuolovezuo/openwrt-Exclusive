@@ -165,7 +165,7 @@ jobs:
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
         body: |
-          功能介绍：含Vssr、Passwall、bypass、SSR、MosDNS、alist网盘挂载工具等插件。
+          功能介绍：含Vssr、Passwall、openclash、SSR、MosDNS、alist网盘挂载工具等插件。
           [固件源码](https://github.com/coolsnowwolf/lede)
           由衷感谢所有为openwrt无私奉献的大佬们
           📥 固件下载
