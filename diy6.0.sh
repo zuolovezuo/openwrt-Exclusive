@@ -34,9 +34,6 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-pass
 git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall package/passwall
-find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-find ./ | grep Makefile | grep mosdns | xargs rm -f
-git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 git clone https://github.com/linkease/istore.git package/istore
@@ -44,5 +41,9 @@ git clone https://github.com/linkease/istore-ui.git package/istore-ui
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+find ./ | grep Makefile | grep mosdns | xargs rm -f
+git clone https://github.com/sbwml/luci-app-mosdns package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 
