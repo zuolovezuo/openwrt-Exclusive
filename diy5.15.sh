@@ -16,9 +16,6 @@ sed -i 's/KERNEL_PATCHVER:=6.2/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makef
 # sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
 git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
-git clone -b luci https://github.com/xiaorouji/openwrt-passwall package/passwall
-# git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 git clone https://github.com/fw876/helloworld.git package/ssr
 git clone https://github.com/firker/diy-ziyong.git package/diy-ziyong
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
@@ -28,6 +25,10 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme
  find ./ | grep Makefile | grep mosdns | xargs rm -f
 # git clone https://github.com/firkerword/openwrt-mos.git package/openwrt-mos
 git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+git clone -b luci https://github.com/xiaorouji/openwrt-passwall package/passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 git clone https://github.com/firkerword/luci-app-lucky.git package/lucky
