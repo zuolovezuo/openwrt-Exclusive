@@ -21,12 +21,12 @@ curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/cus_config.yam
 sed -i 's/luci-theme-bootstrap/luci-theme-opentomcat/g' ./feeds/luci/collections/luci/Makefile
 # rm -rf ./feeds/luci/applications/luci-app-qbittorrent
 rm -rf ./feeds/luci/applications/luci-app-serverchan
-# rm -rf ./feeds/luci/applications/luci-app-mosdns
+rm -rf ./feeds/luci/applications/luci-app-mosdns
 # rm -rf ./package/diy-ziyong/adguardhome
 rm -rf ./package/diy-ziyong/smartdns
 rm -rf ./feeds/packages/net/adguardhome
 rm -rf ./feeds/packages/net/smartdns
-# rm -rf ./feeds/packages/net/mosdns
+#rm -rf ./feeds/packages/net/mosdns
 rm -rf ./feeds/luci/themes/luci-theme-argon
 # rm -rf ./package/openwrt-passwall/v2ray-geodata
 rm -rf ./package/ssr/v2ray-geodata
