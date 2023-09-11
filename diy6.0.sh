@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 #=============================================================
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part1.sh
@@ -33,7 +33,7 @@ git clone https://github.com/firkerword/luci-app-lucky.git package/lucky
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass package/luci-app-bypass
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 # git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
-git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
