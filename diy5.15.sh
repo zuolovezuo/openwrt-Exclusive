@@ -42,8 +42,8 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 # git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 # git clone https://github.com/firkerword/luci-app-lucky.git package/lucky
-# git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
-git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
+git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+# git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass package/luci-app-bypass
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
