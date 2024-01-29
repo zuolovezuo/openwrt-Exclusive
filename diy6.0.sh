@@ -49,7 +49,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/ope
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 # git clone https://github.com/dwj0/luci-app-sms-tool.git package/luci-app-sms-tool
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
-git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 git clone https://github.com/firkerword/luci-app-parentcontrol.git package/parentcontrol
 git clone https://github.com/firkerword/luci-app-smartdns.git package/luci-app-smartdns
 git clone https://github.com/firkerword/smartdns.git package/smartdns
