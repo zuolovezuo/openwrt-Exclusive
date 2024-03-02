@@ -191,7 +191,7 @@ jobs:
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
         body: |
-          功能介绍：含Dockerman、定时设置、passwall、openclash、mosdns、lucky、微信推送等插件。
+          功能介绍：含Dockerman、定时设置、passwall、mosdns、lucky、微信推送等插件。
           [固件源码](https://github.com/immortalwrt/immortalwrt/tree/master)
           由衷感谢所有为openwrt无私奉献的大佬们
           📥 固件下载
