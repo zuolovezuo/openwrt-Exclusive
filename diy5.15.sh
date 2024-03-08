@@ -53,7 +53,8 @@ find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/luci-app-dae package/dae
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
+git clone https://github.com/firkerword/luci-app-serverchan.git package/luci-app-serverchan
+# git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 # git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 # git clone https://github.com/firkerword/luci-app-lucky.git package/lucky
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
