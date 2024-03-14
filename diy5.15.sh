@@ -29,8 +29,8 @@ rm -rf package/custom; mkdir package/custom
 # sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 # sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
 git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
-git clone https://github.com/fw876/helloworld.git package/ssr
+# git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
+# git clone https://github.com/fw876/helloworld.git package/ssr
 # git clone https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 git clone https://github.com/firker/diy-ziyong.git package/diy-ziyong
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
@@ -51,7 +51,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone https://github.com/sbwml/luci-app-dae package/dae
+# git clone https://github.com/sbwml/luci-app-dae package/dae
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 git clone https://github.com/firkerword/luci-app-serverchan.git package/luci-app-serverchan
 # git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
