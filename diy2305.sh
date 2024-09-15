@@ -7,9 +7,16 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=============================================================
+
+# Uncomment a feed source
+#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g' ./target/linux/x86/Makefile
 sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=6.6/g' ./target/linux/x86/Makefile
-sed -i 's/https://github.com/coolsnowwolf/luci/https://github.com/coolsnowwolf/luci.git;openwrt-23.05/g' feeds.conf.default
+sed -i '/luci/d' feeds.conf.default
+# echo 'src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-23.05' >>feeds.conf.default
+sed -i '2i src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-23.05' feeds.conf.default
+
+# Add a feed source
 function merge_package(){
     repo=`echo $1 | rev | cut -d'/' -f 1 | rev`
     pkg=`echo $2 | rev | cut -d'/' -f 1 | rev`
@@ -24,7 +31,6 @@ function drop_package(){
 
 rm -rf package/custom; mkdir package/custom
 
-# Add a feed source
 # git clone https://github.com/fw876/helloworld.git package/ssr
 git clone https://github.com/firker/diy-ziyong -b 2305 package/diy-ziyong
 git clone https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
