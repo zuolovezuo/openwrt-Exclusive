@@ -22,6 +22,7 @@ curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/logo.jpg > ./p
 # rm -rf ./feeds/luci/applications/luci-app-qbittorrent
 rm -rf ./feeds/luci/applications/luci-app-wechatpush
 rm -rf ./feeds/luci/applications/luci-app-mosdns
+rm -rf ./feeds/luci/applications/luci-app-smartdns
 # rm -rf ./package/diy-ziyong/adguardhome
 rm -rf ./package/diy-ziyong/smartdns
 rm -rf ./feeds/packages/net/adguardhome
