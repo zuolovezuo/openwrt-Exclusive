@@ -25,7 +25,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 2305.config
   DIY_P1_SH: diy2305.sh
-  DIY_P2_SH: diy-part.sh
+  DIY_P2_SH: diy-part2305-2.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
@@ -35,7 +35,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: 检查项目分支
@@ -62,7 +62,8 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         df -hT
-        sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d /usr/local/lib/android
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+        sudo docker image prune --all --force
         sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* adoptopenjdk* mysql* php* mongodb* dotnet* moby* snapd* || true
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
@@ -178,7 +179,7 @@ jobs:
     
     - name: 发布至release
       id: release
-      uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1.14.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         name: ${{ env.FILE_TIME }} 「 openwrt-2305-X86-64 」
@@ -195,14 +196,14 @@ jobs:
         artifacts: ${{ env.FIRMWARE }}/*
 
     - name: 清理旧的workflow
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: Mattraks/delete-workflow-runs@main
       with:
         token: ${{ secrets.RELEASE_TOKEN }}
         retain_days: 180
         keep_minimum_runs: 10
 
     - name: 删除旧的Releases
-      uses: dev-drprasad/delete-older-releases@v0.3.2
+      uses: dev-drprasad/delete-older-releases@master
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         keep_latest: 9
