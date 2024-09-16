@@ -33,10 +33,8 @@ rm -rf package/custom; mkdir package/custom
 
 # git clone https://github.com/fw876/helloworld.git package/ssr
 git clone https://github.com/firker/diy-ziyong -b 2305 package/diy-ziyong
-git clone https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 git clone https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon
-git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
-git clone https://github.com/realJustinLee/luci-theme-fruitbingo.git package/luci-theme-fruitbingo
+git clone https://github.com/jerrykuku/luci-app-argon-config.git  package/luci-app-argon-config
 # find ./ | grep Makefile | grep mosdns | xargs rm -f
 # git clone https://github.com/firkerword/openwrt-mos.git package/openwrt-mos
 # git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
