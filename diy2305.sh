@@ -53,5 +53,6 @@ git clone https://github.com/tty228/luci-app-wechatpush.git package/luci-app-ser
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 chmod 755 ./package/lucky/luci-app-lucky/root/usr/bin/luckyarch
 git clone https://github.com/linkease/istore.git package/istore
-sed -i 's/luci-lib-ipkg/luci-base/g' package/istore/luci/luci-app-store/Makefile
-git clone https://github.com/linkease/istore-ui.git package/istore-ui
+git clone https://github.com/firkerword/luci-lib-ipkg.git package/istore/libs
+# sed -i 's/luci-lib-ipkg/luci-base/g' package/istore/luci/luci-app-store/Makefile
+
