@@ -188,7 +188,7 @@ jobs:
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
         body: |
-          功能介绍：自用测试固件。
+          功能介绍：该版本luci为2305，目前包含passwall、mosdns、Docker、微信推送等基础插件，部分插件可以从istore官方商店安装，不保稳定性。
           [固件源码](https://github.com/coolsnowwolf/lede)
           由衷感谢所有为openwrt无私奉献的大佬们
           📥 固件下载
