@@ -188,11 +188,10 @@ jobs:
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
         body: |
-          功能介绍：该版本luci为2305，目前包含passwall、v2raya、mosdns、Docker、微信推送等基础插件，不保稳定性。
+          功能介绍：该版本luci为2305，内核版本6.6，目前包含passwall、mosdns、Docker、lucky、微信推送等基础插件，其他功能可以用docker来实现，满足普通用户使用了。
           [固件源码](https://github.com/coolsnowwolf/lede)
           由衷感谢所有为openwrt无私奉献的大佬们
           📥 固件下载
-          🔗 [国外WT网盘](${{ steps.wetransfer.outputs.url }})
         artifacts: ${{ env.FIRMWARE }}/*
 
     - name: 清理旧的workflow
