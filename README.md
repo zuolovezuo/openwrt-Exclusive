@@ -1,4 +1,4 @@
-# OpenWrt18.06-X86-64自用版云编译项目
+# Lede-X86-64自用版云编译项目
 
 ## 固件来源：
 
@@ -12,7 +12,7 @@ lean固件源码地址：[https://github.com/coolsnowwolf/lede](https://github.c
 
 ## 固件说明：
 
-lean源码版本，内核为**5.15**、**6.6**
+lean源码版本，内核为**6.6**
 
 自动每3天更新一次，手动不定时更新
 
