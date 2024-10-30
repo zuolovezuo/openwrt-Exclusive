@@ -33,6 +33,7 @@ rm -rf package/custom; mkdir package/custom
 
 # git clone https://github.com/fw876/helloworld.git package/ssr
 # git clone https://github.com/firker/diy-ziyong -b 2305 package/diy-ziyong
+merge_package https://github.com/firker/diy-ziyong diy-ziyong/wrtbwmon
 git clone https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git  package/luci-app-argon-config
 # find ./ | grep Makefile | grep mosdns | xargs rm -f
