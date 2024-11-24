@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: OpenWrt-lede6.6-2305
+name: OpenWrt-lede6.12-2305
 
 on:
   repository_dispatch:
