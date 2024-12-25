@@ -36,6 +36,7 @@ git clone https://github.com/firker/diy-ziyong -b 2305 package/diy-ziyong
 # merge_package https://github.com/firker/diy-ziyong diy-ziyong/wrtbwmon
 git clone https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git  package/luci-app-argon-config
+git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git  package/luci-theme-kucat
 # find ./ | grep Makefile | grep mosdns | xargs rm -f
 # git clone https://github.com/firkerword/openwrt-mos.git package/openwrt-mos
 # git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
