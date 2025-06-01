@@ -41,6 +41,7 @@ git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/openwrt-ni
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone https://github.com/sirpdboy/luci-app-advancedplus.git package/luci-app-advancedplus
+git clone https://github.com/sirpdboy/luci-app-taskplan package/luci-app-taskplan
 # git clone -b luci-smartdns-new-version https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone https://github.com/tty228/luci-app-wechatpush.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
