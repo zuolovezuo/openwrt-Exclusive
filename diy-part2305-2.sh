@@ -19,5 +19,6 @@ sed -i "s/hostname='OpenWrt'/hostname='OpenWrt-SE'/g" ./package/base-files/files
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 # rm -rf ./feeds/luci/applications/luci-app-qbittorrent
 rm -rf ./feeds/luci/applications/luci-app-wechatpush
-
+rm -rf ./feeds/luci/applications/luci-app-mosdns
+rm -rf ./feeds/packages/net/mosdns
 
