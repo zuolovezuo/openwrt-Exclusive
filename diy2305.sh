@@ -46,6 +46,8 @@ git clone https://github.com/sirpdboy/luci-app-taskplan package/luci-app-taskpla
 git clone https://github.com/tty228/luci-app-wechatpush.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 chmod 755 ./package/lucky/luci-app-lucky/root/usr/bin/luckyarch
+find ./ | grep Makefile | grep mosdns | xargs rm -f
+git clone https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone https://github.com/linkease/nas-packages-luci.git package/nas-packages-luci
 git clone https://github.com/linkease/nas-packages.git package/nas-packages
 git clone https://github.com/linkease/istore.git package/istore
