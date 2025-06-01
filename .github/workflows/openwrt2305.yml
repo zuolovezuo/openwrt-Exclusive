@@ -182,7 +182,7 @@ jobs:
       uses: ncipollo/release-action@v1.14.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        name: ${{ env.FILE_TIME }} 「 openwrt-2305-X86-64 」
+        name: ${{ env.FILE_TIME }} 「 openwrt-2410-X86-64 」
         allowUpdates: true
         tag: ${{ env.TAG_TIME }}
         commit: main
