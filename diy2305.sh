@@ -43,6 +43,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/ope
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone https://github.com/sirpdboy/luci-app-advancedplus.git package/luci-app-advancedplus
 git clone https://github.com/sirpdboy/luci-app-taskplan package/luci-app-taskplan
+git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 # git clone -b luci-smartdns-new-version https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone https://github.com/tty228/luci-app-wechatpush.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
